@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hint_product_fragment_valor">Valor</string>
+    <string name="text_button_add_product_fragment">ADD</string>
+    <string name="label_fragment_product">Product</string>
+    <string name="label_home_fragment">Firebase Firestore</string>
+    <string name="text_btn_update_product_fragment">UPDATE</string>
+    <string name="message_inserted_firebase">The product is inserted</string>
+    <string name="message_updated_product_firebase">The product is updated</string>
+    <string name="message_error_in_get_data">An error happen on get data</string>
+    <string name="message_delete_complete_product">Delete complete</string>
+    <string name="message_delete_error_product">Error in delete id : $id</string>
+    <string name="message_error_in_class_cast">Bug happen in code</string>
+    <string name="message_partial_get_data_error_products">Partial get data error</string>
+    <string name="hint_product_fragment_image">Image url</string>
+    <string name="message_internet_get_data_error_products">Failed connection with internet</string>
+    <string name="title_menu">Settings</string>
+</resources>

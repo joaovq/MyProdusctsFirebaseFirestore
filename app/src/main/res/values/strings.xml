@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">FirebaseFirestore</string>
+    <string name="hint_product_fragment_nome">Nome</string>
+    <string name="hint_product_fragment_valor">Valor</string>
+    <string name="text_button_add_product_fragment">ADD</string>
+    <string name="label_fragment_product">Product</string>
+    <string name="label_home_fragment">Firebase Firestore</string>
+    <string name="text_btn_update_product_fragment">UPDATE</string>
+    <string name="message_inserted_firebase">The product is inserted</string>
+    <string name="message_updated_product_firebase">The product is updated</string>
+    <string name="message_error_in_get_data">An error happen on get data</string>
+    <string name="message_delete_complete_product">Delete complete</string>
+    <string name="message_delete_error_product">Error in delete id : $id</string>
+    <string name="message_error_in_class_cast">Bug happen in code</string>
+    <string name="message_partial_get_data_error_products">Partial get data error</string>
+    <string name="hint_product_fragment_image">Image url</string>
+    <string name="message_internet_get_data_error_products">Failed connection with internet</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="title_menu">Settings</string>
+</resources>
