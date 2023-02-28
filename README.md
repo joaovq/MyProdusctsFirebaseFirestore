@@ -19,7 +19,7 @@ style="width:180px; height:350px"
 
 
 
-- Click the flaticon cart and navigate to fragment "add product"
+- Click the floating action button cart and navigate to fragment "add product"
 - Click on item for update
 - Swipe each item for delete
 - Click in menu toolbar for navigate up settings
