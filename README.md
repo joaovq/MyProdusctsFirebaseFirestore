@@ -5,6 +5,8 @@
 ## How work...
 
 <img src="https://user-images.githubusercontent.com/101160670/221365719-d1a06c8b-9ece-4512-bf9a-d1f11993be13.png"
+style="width:180px; height:350px"/>
+<img src="https://user-images.githubusercontent.com/101160670/222003328-7181a44a-84cd-4ffc-8ca1-956457c025e0.png"
 style="width:180px; height:350px"
 />
 <img src="https://user-images.githubusercontent.com/101160670/221365855-518b0bde-6ae2-4db3-b679-7790a8cf9fed.png"
@@ -26,4 +28,4 @@ style="width:180px; height:350px"
 
 ## Observations
 - The preferences still not implmented
-- This is demo, implement your project for work all funcionalities (the file google-services.json not include)
+- This is demo, implement your project for work all funcionalities (the file  ```google-services.json```  not include)
