@@ -2,7 +2,7 @@
  
  Demo for Firebase Firestore using Data Binding, Navigation, Architecture MVVM, Glide and Preferences API
 
-## How work...
+## Features...
 
 <img src="https://user-images.githubusercontent.com/101160670/221365719-d1a06c8b-9ece-4512-bf9a-d1f11993be13.png"
 style="width:180px; height:350px"/>
