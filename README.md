@@ -19,13 +19,18 @@ style="width:180px; height:350px"
 style="width:180px; height:350px"
 />
 
-
-
 - Click the floating action button cart and navigate to fragment "add product"
 - Click on item for update
 - Swipe each item for delete
 - Click in menu toolbar for navigate up settings
 
+## App showcase
+
+<p align="center">
+<img src="https://media.giphy.com/media/vjFKFhkvXlbV5jK54s/giphy.gif" style="height:400px;"/>
+</p>
+
+
 ## Observations
-- The preferences still not implmented
+- The preferences still not implemented
 - This is demo, implement your project for work all funcionalities (the file  ```google-services.json```  not include)
