@@ -2,11 +2,9 @@ package br.com.joaovitorqueiroz.firebasefirestore.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
-import androidx.appcompat.widget.Toolbar
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -32,7 +30,6 @@ class MainActivity : AppCompatActivity() {
 //      or
 //      val binding: ActivityMainBinding = ActivityMainBinding.inflate(getLayoutInflater())
         setupActionbar()
-
         configNavigation()
     }
 
