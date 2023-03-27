@@ -9,16 +9,16 @@ class DataSource(private val firestore: FirebaseFirestore) : Repository<String, 
 
     private val products = mutableListOf<Product>()
 
-
     override suspend fun add(value: Product): String {
         var idInserted = ""
 //        This format generate Id automatic. for selected id, use document(path) and set(data)
-        firestore.collection(COLLECTION_PATH).add(mapOf(
-            "nome" to value.nome,
-            "valor" to value.valor,
-            "imagem" to value.image
-        )).addOnSuccessListener {
-                documentReference ->
+        firestore.collection(COLLECTION_PATH).add(
+            mapOf(
+                "nome" to value.nome,
+                "valor" to value.valor,
+                "imagem" to value.image,
+            ),
+        ).addOnSuccessListener { documentReference ->
             Log.d(TAG_INSERT, "DocumentSnapshot added with ID: ${documentReference.id}")
             idInserted = documentReference.id
         }.addOnFailureListener { e ->
@@ -48,10 +48,9 @@ class DataSource(private val firestore: FirebaseFirestore) : Repository<String, 
         }
 
         return products
-
     }
 
-    override  fun orderBy(field : String): List<Product> {
+    override fun orderBy(field: String): List<Product> {
         val products = mutableListOf<Product>()
 
         firestore.collection(COLLECTION_PATH).orderBy(field).get().addOnSuccessListener { result ->
@@ -66,10 +65,9 @@ class DataSource(private val firestore: FirebaseFirestore) : Repository<String, 
         }
 
         return products
-
     }
 
-    override suspend fun delete(id : String) {
+    override suspend fun delete(id: String) {
         firestore.collection(COLLECTION_PATH).document(id).delete().addOnCompleteListener {
             Log.d(TAG_DELETE, "Complete")
         }.addOnFailureListener { exception ->
@@ -77,17 +75,19 @@ class DataSource(private val firestore: FirebaseFirestore) : Repository<String, 
         }
     }
 
-    override suspend fun update(product : Product, id : String) {
+    override suspend fun update(product: Product, id: String) {
         val productsRef = firestore.collection(COLLECTION_PATH)
             .document(id)
 
 // Set the "isCapital" field of the city 'DC'
         productsRef
-            .update(mapOf(
-                "nome" to product.nome,
-                "valor" to product.valor,
-                "imagem" to product.image
-            ))
+            .update(
+                mapOf(
+                    "nome" to product.nome,
+                    "valor" to product.valor,
+                    "imagem" to product.image,
+                ),
+            )
             .addOnSuccessListener {
                 Log.d(TAG_UPDATE, "DocumentSnapshot successfully updated!")
             }
