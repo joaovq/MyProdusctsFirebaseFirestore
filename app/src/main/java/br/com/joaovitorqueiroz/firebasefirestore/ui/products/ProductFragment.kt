@@ -1,13 +1,14 @@
 package br.com.joaovitorqueiroz.firebasefirestore.ui.products
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import android.view.*
-import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModel
-import androidx.navigation.Navigator
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import br.com.joaovitorqueiroz.firebasefirestore.R
@@ -15,14 +16,13 @@ import br.com.joaovitorqueiroz.firebasefirestore.data.database.DataSource
 import br.com.joaovitorqueiroz.firebasefirestore.databinding.FragmentProductBinding
 import br.com.joaovitorqueiroz.firebasefirestore.extensions.closeKeyBoard
 import br.com.joaovitorqueiroz.firebasefirestore.model.Product
-import br.com.joaovitorqueiroz.firebasefirestore.ui.productslist.ProductsListViewModel
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.firestore.FirebaseFirestore
 
 class ProductFragment : Fragment() {
 
-    private val viewModel: ProductViewModel by viewModels{
-        object :ViewModelProvider.Factory{
+    private val viewModel: ProductViewModel by viewModels {
+        object : ViewModelProvider.Factory {
             override fun <T : ViewModel> create(modelClass: Class<T>): T {
                 val db = FirebaseFirestore.getInstance()
 
@@ -33,16 +33,16 @@ class ProductFragment : Fragment() {
         }
     }
 
-    private val args : ProductFragmentArgs by navArgs()
+    private val args: ProductFragmentArgs by navArgs()
 
-    private lateinit var _binding : FragmentProductBinding
-    val binding : FragmentProductBinding get() = _binding
+    private lateinit var _binding: FragmentProductBinding
+    val binding: FragmentProductBinding get() = _binding
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?,
     ): View {
-
         _binding = FragmentProductBinding.inflate(inflater, container, false)
 
         //        DataBinding: Setting the fragment as the LifecycleOwner might cause
@@ -82,7 +82,7 @@ class ProductFragment : Fragment() {
         }
     }
 
-    private fun isValidForm() = when{
+    private fun isValidForm() = when {
         _binding.etProductImage.text.toString().isBlank() -> {
             showErrorInView("This argument Image can't null")
             false
@@ -98,7 +98,7 @@ class ProductFragment : Fragment() {
         else -> true
     }
 
-    private fun showErrorInView(message : String) {
+    private fun showErrorInView(message: String) {
         makeSnackbarWithMessage(message)
     }
 
@@ -113,16 +113,15 @@ class ProductFragment : Fragment() {
 
     private fun getProductIntance() = Product(
         id = args.product?.id,
-       nome =  _binding.etProductNome.text.toString(),
+        nome = _binding.etProductNome.text.toString(),
         valor = _binding.etProductValor.text.toString().toLongOrNull() ?: 0,
-        image = _binding.etProductImage.text.toString()
+        image = _binding.etProductImage.text.toString(),
     )
 
-    private fun hideKeyboard(){
+    private fun hideKeyboard() {
         val parentActivity = requireActivity()
-        if (parentActivity is AppCompatActivity){
+        if (parentActivity is AppCompatActivity) {
             parentActivity.closeKeyBoard()
         }
     }
-
 }
